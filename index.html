@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ShieldAI — Stop Scams Before They Strike</title>
+  <meta name="description" content="India's first autonomous AI middleware agent that intercepts UPI fraud, deepfake voice calls, and WhatsApp scam messages in real time, before a single rupee is lost."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- ══════════════════ NAVBAR ══════════════════ -->
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <div class="nav-logo">
+      <div class="logo-icon">
+        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 2L4 9V20C4 28.8 11.2 37.1 20 39C28.8 37.1 36 28.8 36 20V9L20 2Z" fill="url(#shieldGrad)" stroke="url(#strokeGrad)" stroke-width="1.5"/>
+          <text x="50%" y="56%" dominant-baseline="middle" text-anchor="middle" font-family="Inter" font-weight="800" font-size="13" fill="#0ff">AI</text>
+          <defs>
+            <linearGradient id="shieldGrad" x1="4" y1="2" x2="36" y2="39">
+              <stop offset="0%" stop-color="#0a1628"/>
+              <stop offset="100%" stop-color="#0d2040"/>
+            </linearGradient>
+            <linearGradient id="strokeGrad" x1="4" y1="2" x2="36" y2="39">
+              <stop offset="0%" stop-color="#00f0ff"/>
+              <stop offset="100%" stop-color="#0066ff"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <span class="logo-text">ShieldAI</span>
+    </div>
+    <div class="nav-links">
+      <a href="#how-it-works" class="nav-link">How It Works</a>
+      <a href="#engine" class="nav-link">Engine</a>
+      <a href="#demo" class="nav-link">Demo</a>
+      <a href="#stack" class="nav-link">Stack</a>
+    </div>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle Theme" title="Toggle Light/Dark Theme">
+      <span class="icon-sun">☀️</span>
+      <span class="icon-moon" style="display:none">🌙</span>
+    </button>
+    <a href="#demo" class="btn-primary nav-cta">TRY DEMO</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#how-it-works" class="mobile-link">How It Works</a>
+  <a href="#engine" class="mobile-link">Engine</a>
+  <a href="#demo" class="mobile-link">Demo</a>
+  <a href="#stack" class="mobile-link">Stack</a>
+  <button class="mobile-theme-toggle" id="mobileThemeToggle">☀️ Light Mode</button>
+  <a href="#demo" class="btn-primary mobile-cta">TRY DEMO</a>
+</div>
+
+<!-- ══════════════════ HERO ══════════════════ -->
+<section class="hero" id="home">
+  <div class="grid-overlay"></div>
+  <div class="hero-particles" id="particles"></div>
+
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span class="badge-dot"></span>
+      ACTIVE PROTECTION &nbsp;·&nbsp; 847 SCAMS BLOCKED TODAY
+    </div>
+
+    <h1 class="hero-title">
+      Stop <span class="text-red">Scams</span><br/>
+      Before They<br/>
+      <span class="text-blue">Strike</span>
+    </h1>
+
+    <p class="hero-subtitle">
+      India's first autonomous AI middleware agent that intercepts UPI fraud,<br/>
+      deepfake voice calls, and WhatsApp scam messages — in real time,<br/>
+      before a single rupee is lost.
+    </p>
+
+    <div class="hero-actions">
+      <a href="#demo" class="btn-primary btn-large pulse-btn">See Live Demo</a>
+      <a href="#how-it-works" class="btn-ghost btn-large">How It Works →</a>
+    </div>
+
+    <div class="hero-stats">
+      <div class="stat-item">
+        <span class="stat-number" data-target="847">0</span>
+        <span class="stat-label">Scams Blocked Today</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-number" data-target="98">0</span><span class="stat-suffix">%</span>
+        <span class="stat-label">Detection Accuracy</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-number" data-target="120">0</span><span class="stat-suffix">ms</span>
+        <span class="stat-label">Response Time</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-indicator">
+    <div class="scroll-dot"></div>
+  </div>
+</section>
+
+<!-- ══════════════════ HOW IT WORKS ══════════════════ -->
+<section class="section" id="how-it-works">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge">THE PROCESS</div>
+      <h2 class="section-title">How ShieldAI <span class="text-cyan">Works</span></h2>
+      <p class="section-subtitle">Three autonomous steps — intercept, analyze, neutralize. All in under 200ms.</p>
+    </div>
+
+    <div class="steps-flow">
+      <div class="step-card" data-step="1">
+        <div class="step-number">01</div>
+        <div class="step-icon">
+          <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="20" stroke="#00f0ff" stroke-width="2"/><path d="M16 24l6 6 10-12" stroke="#00f0ff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Intercept</h3>
+        <p>AI middleware hooks into incoming calls and messages via Twilio SIP routing and WhatsApp Business API — transparent to the user.</p>
+        <div class="step-connector"></div>
+      </div>
+
+      <div class="step-card" data-step="2">
+        <div class="step-number">02</div>
+        <div class="step-icon">
+          <svg viewBox="0 0 48 48" fill="none"><rect x="8" y="8" width="32" height="32" rx="6" stroke="#f5a623" stroke-width="2"/><path d="M16 20h16M16 24h10M16 28h12" stroke="#f5a623" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Analyze</h3>
+        <p>Groq-powered LLM parses content for scam tactics: forced urgency, fake UPI requests, deepfake voice patterns, and identity spoofing.</p>
+        <div class="step-connector"></div>
+      </div>
+
+      <div class="step-card" data-step="3">
+        <div class="step-number">03</div>
+        <div class="step-icon">
+          <svg viewBox="0 0 48 48" fill="none"><path d="M24 4L6 12v14c0 10.5 7.7 20.3 18 22.5C34.3 46.3 42 36.5 42 26V12L24 4Z" fill="#ff3b3b22" stroke="#ff3b3b" stroke-width="2"/><path d="M17 24l5 5 9-10" stroke="#ff3b3b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Neutralize</h3>
+        <p>Returns a strict JSON verdict: <code>NEUTRALIZE</code>, <code>MONITOR</code>, or <code>ESCALATE</code>. Zero hallucinations. Zero false executions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ ENGINE ══════════════════ -->
+<section class="section section-dark" id="engine">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge">UNDER THE HOOD</div>
+      <h2 class="section-title">The <span class="text-cyan">AI Engine</span></h2>
+      <p class="section-subtitle">Enterprise-grade reliability enforced at every layer.</p>
+    </div>
+
+    <div class="engine-grid">
+      <div class="engine-card glow-cyan">
+        <div class="engine-icon cyan">🛡️</div>
+        <h3>Pydantic Schema Enforcement</h3>
+        <p>The LLM is strictly constrained to output valid JSON matching our ThreatVerdict schema. No free-form text. No hallucinations.</p>
+        <div class="code-block">
+<pre><code>{
+  "verdict": "NEUTRALIZE",
+  "threat_type": "UPI_FRAUD",
+  "confidence": 0.97,
+  "reason": "Forced urgency + fake UPI ID"
+}</code></pre>
+        </div>
+      </div>
+
+      <div class="engine-card glow-orange">
+        <div class="engine-icon orange">⚡</div>
+        <h3>Real-Time WebSocket Stream</h3>
+        <p>Audio transcription via Deepgram streams in real-time. Analysis results are pushed back via WebSocket in under 120ms.</p>
+        <div class="tech-badges">
+          <span class="badge cyan">WebSocket</span>
+          <span class="badge orange">Deepgram STT</span>
+          <span class="badge blue">Groq LLaMA</span>
+        </div>
+      </div>
+
+      <div class="engine-card glow-red">
+        <div class="engine-icon red">🔴</div>
+        <h3>Three-State Decision Engine</h3>
+        <p>Every analysis resolves to exactly one of three machine-readable states — designed for zero ambiguity and automated action.</p>
+        <div class="verdict-states">
+          <div class="verdict neutralize">NEUTRALIZE</div>
+          <div class="verdict monitor">MONITOR</div>
+          <div class="verdict escalate">ESCALATE</div>
+        </div>
+      </div>
+
+      <div class="engine-card glow-blue">
+        <div class="engine-icon blue">🌐</div>
+        <h3>Twilio SIP Middleware</h3>
+        <p>Intercepts calls before they reach your phone. Acts as an invisible shield layer between scammers and your users.</p>
+        <div class="tech-badges">
+          <span class="badge cyan">Twilio Voice</span>
+          <span class="badge blue">SIP Routing</span>
+          <span class="badge orange">FastAPI</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ LIVE DEMO ══════════════════ -->
+<section class="section" id="demo">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge">INTERACTIVE DEMO</div>
+      <h2 class="section-title">Try It <span class="text-cyan">Live</span></h2>
+      <p class="section-subtitle">Paste a suspicious message or call transcript. ShieldAI will analyze it in real time.</p>
+    </div>
+
+    <div class="demo-wrapper">
+      <div class="demo-panel">
+        <div class="demo-input-area">
+          <div class="demo-tabs">
+            <button class="demo-tab active" data-tab="message" id="tab-message">📱 Message</button>
+            <button class="demo-tab" data-tab="call" id="tab-call">📞 Call Transcript</button>
+          </div>
+
+          <div class="demo-examples">
+            <span class="examples-label">Try an example:</span>
+            <button class="example-chip" data-example="upi">UPI Scam</button>
+            <button class="example-chip" data-example="lottery">Lottery Fraud</button>
+            <button class="example-chip" data-example="kyc">KYC Fake</button>
+            <button class="example-chip" data-example="safe">Safe Message</button>
+          </div>
+
+          <textarea id="demoInput" class="demo-textarea" placeholder="Paste a suspicious WhatsApp message or call transcript here...
+
+Example: 'Congratulations! Your SBI account has been flagged. Send ₹500 on UPI ID: sbi.verify@ybl immediately to avoid account suspension. OTP: 847291'"></textarea>
+
+          <button class="btn-primary btn-large btn-full analyze-btn" id="analyzeBtn" onclick="analyzeMessage()">
+            <span class="btn-text">🔍 Analyze with ShieldAI</span>
+            <span class="btn-loading" style="display:none">Analyzing<span class="dots">...</span></span>
+          </button>
+        </div>
+
+        <div class="demo-result" id="demoResult" style="display:none">
+          <div class="result-header">
+            <span class="result-label">ANALYSIS RESULT</span>
+            <span class="result-time" id="resultTime"></span>
+          </div>
+
+          <div class="verdict-display" id="verdictDisplay">
+            <div class="verdict-icon" id="verdictIcon"></div>
+            <div class="verdict-badge" id="verdictBadge"></div>
+          </div>
+
+          <div class="result-json" id="resultJson"></div>
+
+          <div class="result-details" id="resultDetails"></div>
+
+          <div class="threat-indicators" id="threatIndicators"></div>
+        </div>
+      </div>
+
+      <div class="demo-activity">
+        <div class="activity-header">
+          <span>⚡ Live Threat Feed</span>
+          <span class="live-dot-wrapper"><span class="live-dot"></span> LIVE</span>
+        </div>
+        <div class="activity-list" id="activityList">
+          <!-- Injected by JS -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ TECH STACK ══════════════════ -->
+<section class="section section-dark" id="stack">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge">TECHNOLOGY</div>
+      <h2 class="section-title">The <span class="text-cyan">Stack</span></h2>
+      <p class="section-subtitle">Built for enterprise reliability, deployed at hackathon speed.</p>
+    </div>
+
+    <div class="stack-grid">
+      <div class="stack-layer">
+        <div class="layer-label">Frontend</div>
+        <div class="stack-items">
+          <div class="stack-item">
+            <span class="stack-emoji">⚛️</span>
+            <div><strong>React + Vite</strong><small>Real-time UI updates</small></div>
+          </div>
+          <div class="stack-item">
+            <span class="stack-emoji">🔌</span>
+            <div><strong>WebSocket Client</strong><small>Live analysis stream</small></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stack-layer">
+        <div class="layer-label">Backend / AI</div>
+        <div class="stack-items">
+          <div class="stack-item">
+            <span class="stack-emoji">🐍</span>
+            <div><strong>FastAPI + Python</strong><small>Async middleware engine</small></div>
+          </div>
+          <div class="stack-item">
+            <span class="stack-emoji">🧠</span>
+            <div><strong>Groq LLaMA 3</strong><small>Ultra-fast LLM inference</small></div>
+          </div>
+          <div class="stack-item">
+            <span class="stack-emoji">✅</span>
+            <div><strong>Pydantic v2</strong><small>Strict JSON schema enforcement</small></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stack-layer">
+        <div class="layer-label">Telecom / Voice</div>
+        <div class="stack-items">
+          <div class="stack-item">
+            <span class="stack-emoji">📞</span>
+            <div><strong>Twilio Voice</strong><small>SIP call interception</small></div>
+          </div>
+          <div class="stack-item">
+            <span class="stack-emoji">🎙️</span>
+            <div><strong>Deepgram STT</strong><small>Real-time transcription</small></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stack-layer">
+        <div class="layer-label">Infrastructure</div>
+        <div class="stack-items">
+          <div class="stack-item">
+            <span class="stack-emoji">🔴</span>
+            <div><strong>Redis</strong><small>Sub-ms threat caching</small></div>
+          </div>
+          <div class="stack-item">
+            <span class="stack-emoji">🐳</span>
+            <div><strong>Docker + Railway</strong><small>One-command deploy</small></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="architecture-diagram">
+      <div class="arch-flow">
+        <div class="arch-node user">👤<br/><small>User</small></div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node twilio">📞<br/><small>Twilio SIP</small></div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node shield active">🛡️<br/><small>ShieldAI</small></div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node groq">🧠<br/><small>Groq LLM</small></div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node verdict">⚡<br/><small>Verdict</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ FOOTER ══════════════════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <div class="nav-logo">
+          <div class="logo-icon small">
+            <svg viewBox="0 0 40 40" fill="none"><path d="M20 2L4 9V20C4 28.8 11.2 37.1 20 39C28.8 37.1 36 28.8 36 20V9L20 2Z" fill="url(#shieldGrad2)" stroke="url(#strokeGrad2)" stroke-width="1.5"/><text x="50%" y="56%" dominant-baseline="middle" text-anchor="middle" font-family="Inter" font-weight="800" font-size="13" fill="#0ff">AI</text><defs><linearGradient id="shieldGrad2" x1="4" y1="2" x2="36" y2="39"><stop offset="0%" stop-color="#0a1628"/><stop offset="100%" stop-color="#0d2040"/></linearGradient><linearGradient id="strokeGrad2" x1="4" y1="2" x2="36" y2="39"><stop offset="0%" stop-color="#00f0ff"/><stop offset="100%" stop-color="#0066ff"/></linearGradient></defs></svg>
+          </div>
+          <span class="logo-text">ShieldAI</span>
+        </div>
+        <p>Protecting India from financial scams, one intercept at a time.</p>
+      </div>
+      <div class="footer-tagline">
+        Built with <span style="color: #ef4444;">❤️</span> · Consumer Apps / SaaS Prototypes
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 ShieldAI. Autonomous Protection.</span>
+      <span class="footer-status"><span class="live-dot"></span> All systems operational</span>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
