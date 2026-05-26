@@ -30,12 +30,22 @@ window.addEventListener('scroll', () => {
 // ── Hamburger menu ──────────────────────────
 const hamburger = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobileMenu');
-if (hamburger && mobileMenu) {
-  hamburger.addEventListener('click', () => {
-    mobileMenu.classList.toggle('open');
-  });
+const mobileClose = document.getElementById('mobileClose');
+
+function openMobileMenu() {
+  mobileMenu.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeMobileMenu() {
+  mobileMenu.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+if (hamburger) hamburger.addEventListener('click', openMobileMenu);
+if (mobileClose) mobileClose.addEventListener('click', closeMobileMenu);
+if (mobileMenu) {
   mobileMenu.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => mobileMenu.classList.remove('open'));
+    a.addEventListener('click', closeMobileMenu);
   });
 }
 
@@ -298,10 +308,9 @@ function updateLiveCounter() {
 // ── Theme Toggle ───────────────────────────────
 function initThemeToggle() {
   const toggleBtn = document.getElementById('themeToggle');
-  const mobileToggleBtn = document.getElementById('mobileThemeToggle');
   const sunIcon = toggleBtn?.querySelector('.icon-sun');
   const moonIcon = toggleBtn?.querySelector('.icon-moon');
-  
+
   const currentTheme = localStorage.getItem('theme');
   if (currentTheme === 'light') {
     document.body.classList.add('light-theme');
@@ -309,27 +318,19 @@ function initThemeToggle() {
       sunIcon.style.display = 'none';
       moonIcon.style.display = 'inline';
     }
-    if (mobileToggleBtn) {
-      mobileToggleBtn.innerHTML = '🌙 Dark Mode';
-    }
   }
 
   function toggleTheme() {
     document.body.classList.toggle('light-theme');
     const isLight = document.body.classList.contains('light-theme');
     localStorage.setItem('theme', isLight ? 'light' : 'dark');
-    
     if (sunIcon && moonIcon) {
       sunIcon.style.display = isLight ? 'none' : 'inline';
       moonIcon.style.display = isLight ? 'inline' : 'none';
     }
-    if (mobileToggleBtn) {
-      mobileToggleBtn.innerHTML = isLight ? '🌙 Dark Mode' : '☀️ Light Mode';
-    }
   }
 
   if (toggleBtn) toggleBtn.addEventListener('click', toggleTheme);
-  if (mobileToggleBtn) mobileToggleBtn.addEventListener('click', toggleTheme);
 }
 
 // ── Init ─────────────────────────────────────

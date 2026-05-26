@@ -56,11 +56,19 @@
 
 <!-- Mobile Menu -->
 <div class="mobile-menu" id="mobileMenu">
-  <a href="#how-it-works" class="mobile-link">How It Works</a>
-  <a href="#engine" class="mobile-link">Engine</a>
-  <a href="#demo" class="mobile-link">Demo</a>
-  <a href="#stack" class="mobile-link">Stack</a>
-  <button class="mobile-theme-toggle" id="mobileThemeToggle">☀️ Light Mode</button>
+  <div class="mobile-menu-header">
+    <div class="nav-logo">
+      <div class="logo-icon"><svg viewBox="0 0 40 40" fill="none"><path d="M20 2L4 9V20C4 28.8 11.2 37.1 20 39C28.8 37.1 36 28.8 36 20V9L20 2Z" fill="url(#mGrad)" stroke="url(#mStroke)" stroke-width="1.5"/><text x="50%" y="56%" dominant-baseline="middle" text-anchor="middle" font-family="Inter" font-weight="800" font-size="13" fill="#0ff">AI</text><defs><linearGradient id="mGrad" x1="4" y1="2" x2="36" y2="39"><stop offset="0%" stop-color="#0a1628"/><stop offset="100%" stop-color="#0d2040"/></linearGradient><linearGradient id="mStroke" x1="4" y1="2" x2="36" y2="39"><stop offset="0%" stop-color="#00f0ff"/><stop offset="100%" stop-color="#0066ff"/></linearGradient></defs></svg></div>
+      <span class="logo-text">ShieldAI</span>
+    </div>
+    <button class="mobile-close" id="mobileClose" aria-label="Close Menu">&times;</button>
+  </div>
+  <nav class="mobile-nav">
+    <a href="#how-it-works" class="mobile-link">How It Works</a>
+    <a href="#engine" class="mobile-link">Engine</a>
+    <a href="#demo" class="mobile-link">Demo</a>
+    <a href="#stack" class="mobile-link">Stack</a>
+  </nav>
   <a href="#demo" class="btn-primary mobile-cta">TRY DEMO</a>
 </div>
 
