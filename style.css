@@ -529,6 +529,7 @@ body.light-theme .hero::before {
 @media(max-width:768px){
   /* Navbar */
   .nav-links, .nav-cta { display: none; }
+  .nav-actions { margin-left: auto; }
   .hamburger { display: flex; }
   .theme-toggle { padding: 0.35rem; font-size: 1rem; }
 
