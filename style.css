@@ -97,7 +97,8 @@ body.light-theme .navbar.scrolled {
 .logo-icon { width: 36px; height: 36px; }
 .logo-icon.small { width: 28px; height: 28px; }
 .logo-text { font-family: 'Space Grotesk', sans-serif; font-size: 1.2rem; font-weight: 700; color: #fff; letter-spacing: -0.02em; }
-.nav-links { display: flex; gap: 2rem; margin-left: auto; }
+.nav-links { display: flex; gap: 2rem; }
+.nav-actions { display: flex; align-items: center; gap: 0.75rem; margin-left: auto; }
 .nav-link { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color 0.2s; }
 .nav-link:hover { color: var(--cyan); }
 .nav-cta { margin-left: 1rem; }
