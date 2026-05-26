@@ -181,10 +181,15 @@ function displayResult(result, time) {
   const resultDiv = document.getElementById('demoResult');
   resultDiv.style.display = 'block';
 
-  document.getElementById('resultTime').textContent = `⚡ ${time}`;
+  document.getElementById('resultTime').innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px;display:inline-block;vertical-align:middle;margin-right:4px"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> ${time}`;
 
-  const icons = { NEUTRALIZE: '🚫', MONITOR: '⚠️', ESCALATE: '🔴', SAFE: '✅' };
-  document.getElementById('verdictIcon').textContent = icons[result.verdict] || '🔍';
+  const icons = {
+    NEUTRALIZE: '<svg viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:36px;height:36px"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>',
+    MONITOR: '<svg viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:36px;height:36px"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>',
+    ESCALATE: '<svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:36px;height:36px"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>',
+    SAFE: '<svg viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:36px;height:36px"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>'
+  };
+  document.getElementById('verdictIcon').innerHTML = icons[result.verdict] || icons.SAFE;
 
   const badge = document.getElementById('verdictBadge');
   badge.textContent = result.verdict;
@@ -198,10 +203,10 @@ function displayResult(result, time) {
     action: result.action
   }, null, 2);
 
-  document.getElementById('resultDetails').textContent = `📌 ${result.action}`;
+  document.getElementById('resultDetails').innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px;display:inline-block;vertical-align:middle;margin-right:4px"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> ${result.action}`;
 
   const indicatorsDiv = document.getElementById('threatIndicators');
-  indicatorsDiv.innerHTML = result.threats.map(t => `<span class="threat-tag">⚡ ${t}</span>`).join('');
+  indicatorsDiv.innerHTML = result.threats.map(t => `<span class="threat-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:10px;height:10px;display:inline-block;vertical-align:middle;margin-right:3px"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> ${t}</span>`).join('');
 
   resultDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 }

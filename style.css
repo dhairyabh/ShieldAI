@@ -369,7 +369,18 @@ body.light-theme .hero::before {
 .glow-orange:hover { box-shadow:0 8px 40px rgba(245,158,11,0.15); border-color:var(--orange); }
 .glow-red:hover { box-shadow:0 8px 40px rgba(239,68,68,0.15); border-color:var(--red); }
 .glow-blue:hover { box-shadow:0 8px 40px rgba(59,130,246,0.15); border-color:var(--blue); }
-.engine-icon { font-size:2rem; margin-bottom:1rem; }
+.engine-icon {
+  width: 48px; height: 48px;
+  margin-bottom: 1rem;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 10px;
+  padding: 10px;
+}
+.engine-icon.cyan { background: rgba(0,240,255,0.1); }
+.engine-icon.orange { background: rgba(245,158,11,0.1); }
+.engine-icon.red { background: rgba(239,68,68,0.1); }
+.engine-icon.blue { background: rgba(59,130,246,0.1); }
+.engine-icon svg { width: 100%; height: 100%; }
 .engine-card h3 { font-size:1.05rem; font-weight:700; color:#fff; margin-bottom:0.7rem; }
 .engine-card p { color:var(--text-muted); font-size:0.88rem; line-height:1.6; margin-bottom:1rem; }
 .code-block {
@@ -482,6 +493,12 @@ body.light-theme .hero::before {
 .stack-items { display:flex; flex-direction:column; gap:0.9rem; }
 .stack-item { display:flex; align-items:center; gap:0.8rem; }
 .stack-emoji { font-size:1.4rem; flex-shrink:0; }
+.stack-icon {
+  width: 36px; height: 36px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--cyan-dim); border-radius: 8px; padding: 7px;
+}
+.stack-icon svg { width: 100%; height: 100%; stroke: var(--cyan); }
 .stack-item strong { display:block; font-size:0.9rem; color:#fff; }
 .stack-item small { font-size:0.78rem; color:var(--text-muted); }
 .architecture-diagram { background:var(--card); border:1px solid var(--border); border-radius:16px; padding:2rem; }
@@ -489,7 +506,7 @@ body.light-theme .hero::before {
 .arch-node {
   display:flex; flex-direction:column; align-items:center; text-align:center;
   background:var(--bg); border:1px solid var(--border); border-radius:12px;
-  padding:1rem 1.2rem; font-size:1.5rem; gap:0.3rem;
+  padding:1rem 1.2rem; gap:0.4rem;
 }
 .arch-node small { font-size:0.65rem; color:var(--text-muted); font-weight:600; letter-spacing:0.05em; }
 .arch-node.active { border-color:var(--cyan); background:rgba(0,240,255,0.06); box-shadow:0 0 20px rgba(0,240,255,0.15); }
